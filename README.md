@@ -1,8 +1,12 @@
 # Data Validator
 
-## Excel Date Validator Tool
+## Excel Date Validator Tool - Sales & Payment Lines
 
-This repository contains a comprehensive Python script that validates whether all dates from individual store Excel files are present in the merge file `49_stores_sales_lines.xlsx`.
+This repository contains a comprehensive Python script that validates dates and amounts from individual store Excel files against their respective merge files:
+
+- **Sales line files** → validated against sales merge file
+- **Payment line files** → validated against payment merge file
+- **No cross-validation** between sales and payments
 
 ### Quick Start
 
@@ -23,14 +27,18 @@ python3 validate_excel_dates.py
 
 ### What You Get
 
-✅ **Validation of 49 store Excel files** against the master merge file
-✅ **Beautiful HTML report** with visual dashboard and detailed results
-✅ **Text report** for easy terminal viewing
-✅ **Missing date detection** - identifies any dates not in merge file
-✅ **Extra date detection** - finds dates in individual files but not in merge
+✅ **Separate validation** for sales lines and payment lines
+✅ **Automatic file categorization** based on filename patterns
+✅ **Beautiful HTML reports** with visual dashboard (separate for sales and payment)
+✅ **Text reports** for easy terminal viewing
+✅ **Date validation** - ensures all dates are present in merge files
+✅ **Amount validation** - compares totals between individual and merge files
+✅ **Grand total validation** - verifies sum of all individual files
 ✅ **Comprehensive statistics** and file-by-file analysis
 
 ### Documentation
+
+See [DUAL_VALIDATION_GUIDE.md](DUAL_VALIDATION_GUIDE.md) for detailed setup and configuration guide.
 
 See [README_VALIDATOR.md](README_VALIDATOR.md) for complete documentation including:
 - Installation instructions
@@ -41,9 +49,15 @@ See [README_VALIDATOR.md](README_VALIDATOR.md) for complete documentation includ
 
 ### Output Files
 
-After running the validator, you'll get:
-- `validation_report.html` - Interactive HTML report (open in browser)
-- `validation_report.txt` - Plain text report
+After running the validator, you'll get separate reports for each validation type:
+
+**Sales Validation:**
+- `validation_report_sales.html` - Interactive HTML report (open in browser)
+- `validation_report_sales.txt` - Plain text report
+
+**Payment Validation:**
+- `validation_report_payment.html` - Interactive HTML report (open in browser)
+- `validation_report_payment.txt` - Plain text report
 
 ### Requirements
 

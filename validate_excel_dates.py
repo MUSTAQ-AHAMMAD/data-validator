@@ -3,8 +3,9 @@
 Excel Data Validator - Comprehensive Data Validation Tool
 ==========================================================
 This script validates that all dates from individual store Excel files
-are present in the merge file (49_stores_sales_lines.xlsx) and validates
-that payment amounts match between individual files and the merge file.
+are present in their respective merge files:
+- Sales lines individual files against sales lines merge file
+- Payment lines individual files against payment lines merge file
 
 It generates a detailed HTML and text report showing:
 - Summary statistics
@@ -20,28 +21,48 @@ import os
 from datetime import datetime
 from pathlib import Path
 import warnings
+import re
 warnings.filterwarnings('ignore')
 
-# Configuration
-MERGE_FILE = '49_stores_sales_lines.xlsx'
+# Configuration - Sales Lines
+SALES_MERGE_FILE = '49_stores_sales_lines.xlsx'
+SALES_FILE_PATTERN = r'.*sales.*line.*\.xlsx$'  # Pattern to identify sales line files
+SALES_MERGE_DATE_COLUMN = 'Order Lines/Order Ref/Date'
+SALES_INDIVIDUAL_DATE_COLUMN = 'Date'
+SALES_MERGE_ORDER_REF_COLUMN = 'Order Lines/Order Ref'
+SALES_MERGE_AMOUNT_COLUMN = 'Order Lines/Subtotal'
+SALES_INDIVIDUAL_ORDER_REF_COLUMN = 'Order Ref'
+SALES_INDIVIDUAL_AMOUNT_COLUMN = 'Subtotal'
+SALES_INDIVIDUAL_BRANCH_COLUMN = 'Branch'
+
+# Configuration - Payment Lines
+PAYMENT_MERGE_FILE = '49_stores_payment_lines.xlsx'  # Update this with actual payment merge file name
+PAYMENT_FILE_PATTERN = r'.*payment.*line.*\.xlsx$'  # Pattern to identify payment line files
+PAYMENT_MERGE_DATE_COLUMN = 'Payment Lines/Order Ref/Date'
+PAYMENT_INDIVIDUAL_DATE_COLUMN = 'Date'
+PAYMENT_MERGE_ORDER_REF_COLUMN = 'Payment Lines/Order Ref'
+PAYMENT_MERGE_AMOUNT_COLUMN = 'Payment Lines/Amount'
+PAYMENT_INDIVIDUAL_ORDER_REF_COLUMN = 'Order Ref'
+PAYMENT_INDIVIDUAL_AMOUNT_COLUMN = 'Payments/Amount'
+PAYMENT_INDIVIDUAL_BRANCH_COLUMN = 'Branch'
+
+# General Configuration
 REPORT_HTML = 'validation_report.html'
 REPORT_TXT = 'validation_report.txt'
-MERGE_DATE_COLUMN = 'Order Lines/Order Ref/Date'
-INDIVIDUAL_DATE_COLUMN = 'Date'
-MERGE_ORDER_REF_COLUMN = 'Order Lines/Order Ref'
-MERGE_AMOUNT_COLUMN = 'Order Lines/Subtotal'
-INDIVIDUAL_ORDER_REF_COLUMN = 'Order Ref'
-INDIVIDUAL_AMOUNT_COLUMN = 'Payments/Amount'
-INDIVIDUAL_BRANCH_COLUMN = 'Branch'
 AMOUNT_TOLERANCE = 0.01  # Allow small rounding differences
 
 
 class ExcelDateValidator:
-    """Validates dates and amounts across multiple Excel files against a merge file."""
+    """Validates dates and amounts across multiple Excel files against their respective merge files."""
 
-    def __init__(self, base_dir, merge_file):
+    def __init__(self, base_dir, merge_file, file_type='payment',
+                 date_column='Date', merge_date_column='Order Lines/Order Ref/Date',
+                 merge_order_ref_column='Order Lines/Order Ref', merge_amount_column='Order Lines/Subtotal',
+                 individual_order_ref_column='Order Ref', individual_amount_column='Payments/Amount',
+                 individual_branch_column='Branch'):
         self.base_dir = Path(base_dir)
         self.merge_file = self.base_dir / merge_file
+        self.file_type = file_type  # 'sales' or 'payment'
         self.results = []
         self.merge_dates = set()
         self.all_individual_dates = set()
@@ -50,31 +71,40 @@ class ExcelDateValidator:
         self.grand_total_individual = 0
         self.grand_total_merge = 0
 
+        # Column configurations
+        self.merge_date_column = merge_date_column
+        self.individual_date_column = date_column
+        self.merge_order_ref_column = merge_order_ref_column
+        self.merge_amount_column = merge_amount_column
+        self.individual_order_ref_column = individual_order_ref_column
+        self.individual_amount_column = individual_amount_column
+        self.individual_branch_column = individual_branch_column
+
     def load_merge_file(self):
         """Load and extract dates and amounts from the merge file."""
-        print(f"Loading merge file: {self.merge_file}")
+        print(f"Loading {self.file_type} merge file: {self.merge_file}")
         try:
             self.merge_df = pd.read_excel(self.merge_file)
-            if MERGE_DATE_COLUMN not in self.merge_df.columns:
-                raise ValueError(f"Column '{MERGE_DATE_COLUMN}' not found in merge file")
-            if MERGE_ORDER_REF_COLUMN not in self.merge_df.columns:
-                raise ValueError(f"Column '{MERGE_ORDER_REF_COLUMN}' not found in merge file")
-            if MERGE_AMOUNT_COLUMN not in self.merge_df.columns:
-                raise ValueError(f"Column '{MERGE_AMOUNT_COLUMN}' not found in merge file")
+            if self.merge_date_column not in self.merge_df.columns:
+                raise ValueError(f"Column '{self.merge_date_column}' not found in merge file")
+            if self.merge_order_ref_column not in self.merge_df.columns:
+                raise ValueError(f"Column '{self.merge_order_ref_column}' not found in merge file")
+            if self.merge_amount_column not in self.merge_df.columns:
+                raise ValueError(f"Column '{self.merge_amount_column}' not found in merge file")
 
             # Convert to datetime and extract date only
-            self.merge_df[MERGE_DATE_COLUMN] = pd.to_datetime(self.merge_df[MERGE_DATE_COLUMN])
-            self.merge_dates = set(self.merge_df[MERGE_DATE_COLUMN].dt.date)
+            self.merge_df[self.merge_date_column] = pd.to_datetime(self.merge_df[self.merge_date_column])
+            self.merge_dates = set(self.merge_df[self.merge_date_column].dt.date)
 
             # Pre-compute amounts by branch for faster lookup
             # Extract branch name from Order Ref (e.g., "SALAMRYD/12345" -> "SALAMRYD")
-            self.merge_df['branch'] = self.merge_df[MERGE_ORDER_REF_COLUMN].str.split('/').str[0]
+            self.merge_df['branch'] = self.merge_df[self.merge_order_ref_column].str.split('/').str[0]
 
             # Group by branch and order ref to get order-level amounts
             for branch in self.merge_df['branch'].unique():
                 branch_df = self.merge_df[self.merge_df['branch'] == branch]
                 # Sum amounts by order ref to get order total (since merge file has line items)
-                order_amounts = branch_df.groupby(MERGE_ORDER_REF_COLUMN)[MERGE_AMOUNT_COLUMN].sum()
+                order_amounts = branch_df.groupby(self.merge_order_ref_column)[self.merge_amount_column].sum()
                 total_amount = order_amounts.sum()
                 self.merge_amounts_by_branch[branch] = {
                     'total': total_amount,
@@ -82,7 +112,7 @@ class ExcelDateValidator:
                     'order_amounts': order_amounts.to_dict()
                 }
 
-            self.grand_total_merge = self.merge_df[MERGE_AMOUNT_COLUMN].sum()
+            self.grand_total_merge = self.merge_df[self.merge_amount_column].sum()
 
             print(f"✓ Loaded {len(self.merge_df)} rows with {len(self.merge_dates)} unique dates")
             print(f"✓ Computed amounts for {len(self.merge_amounts_by_branch)} branches")
@@ -125,15 +155,15 @@ class ExcelDateValidator:
             df = pd.read_excel(file_path)
 
             # Validate required columns exist
-            if INDIVIDUAL_DATE_COLUMN not in df.columns:
+            if self.individual_date_column not in df.columns:
                 result['status'] = 'Error'
-                result['error'] = f"Column '{INDIVIDUAL_DATE_COLUMN}' not found"
+                result['error'] = f"Column '{self.individual_date_column}' not found"
                 print(f"  ✗ {result['error']}")
                 return result
 
             # Date validation
-            df[INDIVIDUAL_DATE_COLUMN] = pd.to_datetime(df[INDIVIDUAL_DATE_COLUMN])
-            file_dates = set(df[INDIVIDUAL_DATE_COLUMN].dt.date)
+            df[self.individual_date_column] = pd.to_datetime(df[self.individual_date_column])
+            file_dates = set(df[self.individual_date_column].dt.date)
 
             result['total_rows'] = len(df)
             result['unique_dates'] = len(file_dates)
@@ -157,21 +187,21 @@ class ExcelDateValidator:
                 print(f"  ✓ All {result['unique_dates']} unique dates are present in merge file")
 
             # Amount validation (if columns exist)
-            if (INDIVIDUAL_AMOUNT_COLUMN in df.columns and
-                INDIVIDUAL_BRANCH_COLUMN in df.columns and
-                INDIVIDUAL_ORDER_REF_COLUMN in df.columns):
+            if (self.individual_amount_column in df.columns and
+                self.individual_branch_column in df.columns and
+                self.individual_order_ref_column in df.columns):
 
                 # Get branch name
-                branch_names = df[INDIVIDUAL_BRANCH_COLUMN].unique()
+                branch_names = df[self.individual_branch_column].unique()
                 if len(branch_names) > 0:
                     result['branch_name'] = branch_names[0]
 
                     # Calculate total amount from individual file
-                    result['individual_amount'] = df[INDIVIDUAL_AMOUNT_COLUMN].sum()
+                    result['individual_amount'] = df[self.individual_amount_column].sum()
                     self.grand_total_individual += result['individual_amount']
 
                     # Get unique orders from individual file
-                    individual_orders = set(df[INDIVIDUAL_ORDER_REF_COLUMN].unique())
+                    individual_orders = set(df[self.individual_order_ref_column].unique())
                     result['unique_orders_individual'] = len(individual_orders)
 
                     # Get merge file amount for this branch
@@ -676,10 +706,109 @@ class ExcelDateValidator:
         return text_path, html_path
 
 
+def run_dual_validation(base_dir, sales_files, payment_files):
+    """Run validation for both sales and payment lines separately."""
+    all_results = {'sales': None, 'payment': None}
+
+    # Validate sales lines if merge file exists and there are sales files
+    sales_merge_path = Path(base_dir) / SALES_MERGE_FILE
+    if sales_merge_path.exists() and sales_files:
+        print("\n" + "=" * 80)
+        print(f"VALIDATING SALES LINES ({len(sales_files)} files)")
+        print("=" * 80)
+        sales_validator = ExcelDateValidator(
+            base_dir, SALES_MERGE_FILE, file_type='sales',
+            date_column=SALES_INDIVIDUAL_DATE_COLUMN,
+            merge_date_column=SALES_MERGE_DATE_COLUMN,
+            merge_order_ref_column=SALES_MERGE_ORDER_REF_COLUMN,
+            merge_amount_column=SALES_MERGE_AMOUNT_COLUMN,
+            individual_order_ref_column=SALES_INDIVIDUAL_ORDER_REF_COLUMN,
+            individual_amount_column=SALES_INDIVIDUAL_AMOUNT_COLUMN,
+            individual_branch_column=SALES_INDIVIDUAL_BRANCH_COLUMN
+        )
+
+        # Temporarily replace individual files with only sales files
+        original_get_files = sales_validator.get_individual_files
+        sales_validator.get_individual_files = lambda: sales_files
+
+        if sales_validator.validate_all():
+            all_results['sales'] = sales_validator
+    elif not sales_merge_path.exists():
+        print(f"\n⚠ Sales merge file not found: {SALES_MERGE_FILE}")
+        print(f"  Skipping sales lines validation")
+    elif not sales_files:
+        print(f"\n⚠ No sales line files found")
+        print(f"  Skipping sales lines validation")
+
+    # Validate payment lines if merge file exists and there are payment files
+    payment_merge_path = Path(base_dir) / PAYMENT_MERGE_FILE
+    if payment_merge_path.exists() and payment_files:
+        print("\n" + "=" * 80)
+        print(f"VALIDATING PAYMENT LINES ({len(payment_files)} files)")
+        print("=" * 80)
+        payment_validator = ExcelDateValidator(
+            base_dir, PAYMENT_MERGE_FILE, file_type='payment',
+            date_column=PAYMENT_INDIVIDUAL_DATE_COLUMN,
+            merge_date_column=PAYMENT_MERGE_DATE_COLUMN,
+            merge_order_ref_column=PAYMENT_MERGE_ORDER_REF_COLUMN,
+            merge_amount_column=PAYMENT_MERGE_AMOUNT_COLUMN,
+            individual_order_ref_column=PAYMENT_INDIVIDUAL_ORDER_REF_COLUMN,
+            individual_amount_column=PAYMENT_INDIVIDUAL_AMOUNT_COLUMN,
+            individual_branch_column=PAYMENT_INDIVIDUAL_BRANCH_COLUMN
+        )
+
+        # Temporarily replace individual files with only payment files
+        original_get_files = payment_validator.get_individual_files
+        payment_validator.get_individual_files = lambda: payment_files
+
+        if payment_validator.validate_all():
+            all_results['payment'] = payment_validator
+    elif not payment_merge_path.exists():
+        print(f"\n⚠ Payment merge file not found: {PAYMENT_MERGE_FILE}")
+        print(f"  Skipping payment lines validation")
+    elif not payment_files:
+        print(f"\n⚠ No payment line files found")
+        print(f"  Skipping payment lines validation")
+
+    return all_results
+
+
+def categorize_files(base_dir):
+    """Categorize individual files into sales and payment lines."""
+    base_path = Path(base_dir)
+    all_files = list(base_path.glob('*.xlsx')) + list(base_path.glob('*.xls'))
+
+    sales_files = []
+    payment_files = []
+
+    # Remove merge files from the list
+    sales_merge = base_path / SALES_MERGE_FILE
+    payment_merge = base_path / PAYMENT_MERGE_FILE
+
+    for file_path in all_files:
+        # Skip merge files
+        if file_path == sales_merge or file_path == payment_merge:
+            continue
+
+        file_name_lower = file_path.name.lower()
+
+        # Check if file matches sales pattern
+        if re.search(SALES_FILE_PATTERN, file_name_lower, re.IGNORECASE):
+            sales_files.append(file_path)
+        # Check if file matches payment pattern
+        elif re.search(PAYMENT_FILE_PATTERN, file_name_lower, re.IGNORECASE):
+            payment_files.append(file_path)
+        else:
+            # If no pattern matches, default to payment (for backward compatibility)
+            payment_files.append(file_path)
+
+    return sorted(sales_files), sorted(payment_files)
+
+
 def main():
     """Main execution function."""
     print("=" * 80)
-    print("Excel Data Validator")
+    print("Excel Data Validator - Sales & Payment Lines")
     print("=" * 80)
 
     # Get the current directory
@@ -687,32 +816,84 @@ def main():
     if not base_dir:
         base_dir = '.'
 
-    # Create validator
-    validator = ExcelDateValidator(base_dir, MERGE_FILE)
+    # Categorize files into sales and payment
+    print("\nCategorizing files...")
+    sales_files, payment_files = categorize_files(base_dir)
+    print(f"✓ Found {len(sales_files)} sales line file(s)")
+    print(f"✓ Found {len(payment_files)} payment line file(s)")
 
-    # Run validation
-    if validator.validate_all():
-        # Generate and save reports
-        print("\n" + "=" * 80)
-        print("Generating reports...")
-        print("=" * 80)
+    # Run dual validation
+    results = run_dual_validation(base_dir, sales_files, payment_files)
 
-        text_path, html_path = validator.save_reports()
+    # Generate and save reports for each type
+    print("\n" + "=" * 80)
+    print("Generating reports...")
+    print("=" * 80)
 
-        # Print summary to console
-        summary = validator.generate_summary()
-        print("\n" + "=" * 80)
-        print("VALIDATION COMPLETE")
-        print("=" * 80)
+    validation_success = True
 
+    # Sales report
+    if results['sales']:
+        sales_validator = results['sales']
+        sales_text_path = Path(base_dir) / 'validation_report_sales.txt'
+        sales_html_path = Path(base_dir) / 'validation_report_sales.html'
+
+        text_report = sales_validator.generate_text_report()
+        with open(sales_text_path, 'w', encoding='utf-8') as f:
+            f.write(text_report)
+        print(f"✓ Sales text report saved: {sales_text_path}")
+
+        html_report = sales_validator.generate_html_report()
+        with open(sales_html_path, 'w', encoding='utf-8') as f:
+            f.write(html_report)
+        print(f"✓ Sales HTML report saved: {sales_html_path}")
+
+        # Check sales validation status
+        summary = sales_validator.generate_summary()
+        if not (summary['files_with_missing'] == 0 and
+                summary['error_files'] == 0 and
+                summary['files_with_amount_mismatch'] == 0 and
+                summary['grand_total_match']):
+            validation_success = False
+
+    # Payment report
+    if results['payment']:
+        payment_validator = results['payment']
+        payment_text_path = Path(base_dir) / 'validation_report_payment.txt'
+        payment_html_path = Path(base_dir) / 'validation_report_payment.html'
+
+        text_report = payment_validator.generate_text_report()
+        with open(payment_text_path, 'w', encoding='utf-8') as f:
+            f.write(text_report)
+        print(f"✓ Payment text report saved: {payment_text_path}")
+
+        html_report = payment_validator.generate_html_report()
+        with open(payment_html_path, 'w', encoding='utf-8') as f:
+            f.write(html_report)
+        print(f"✓ Payment HTML report saved: {payment_html_path}")
+
+        # Check payment validation status
+        summary = payment_validator.generate_summary()
+        if not (summary['files_with_missing'] == 0 and
+                summary['error_files'] == 0 and
+                summary['files_with_amount_mismatch'] == 0 and
+                summary['grand_total_match']):
+            validation_success = False
+
+    # Print final summary
+    print("\n" + "=" * 80)
+    print("VALIDATION COMPLETE")
+    print("=" * 80)
+
+    # Sales summary
+    if results['sales']:
+        print("\nSALES LINES VALIDATION:")
+        summary = results['sales'].generate_summary()
         if (summary['files_with_missing'] == 0 and
             summary['error_files'] == 0 and
             summary['files_with_amount_mismatch'] == 0 and
             summary['grand_total_match']):
-            print("✓ SUCCESS: All validations passed!")
-            print("  - All dates from individual files are present in the merge file")
-            print("  - All amounts match between individual files and merge file")
-            print(f"  - Grand total matches: {summary['grand_total_individual']:,.2f}")
+            print("✓ SUCCESS: All sales validations passed!")
         else:
             print("✗ ISSUES FOUND:")
             if summary['files_with_missing'] > 0:
@@ -720,18 +901,37 @@ def main():
             if summary['files_with_amount_mismatch'] > 0:
                 print(f"  - {summary['files_with_amount_mismatch']} file(s) have amount mismatches")
             if not summary['grand_total_match']:
-                print(f"  - Grand total mismatch: Individual={summary['grand_total_individual']:,.2f}, Merge={summary['grand_total_merge']:,.2f}, Diff={summary['grand_total_difference']:,.2f}")
+                print(f"  - Grand total mismatch: Diff={summary['grand_total_difference']:,.2f}")
             if summary['error_files'] > 0:
                 print(f"  - {summary['error_files']} file(s) had errors")
 
-        print(f"\nDetailed reports generated:")
-        print(f"  - HTML: {html_path}")
-        print(f"  - Text: {text_path}")
-    else:
-        print("\n✗ Validation failed. Please check the merge file.")
+    # Payment summary
+    if results['payment']:
+        print("\nPAYMENT LINES VALIDATION:")
+        summary = results['payment'].generate_summary()
+        if (summary['files_with_missing'] == 0 and
+            summary['error_files'] == 0 and
+            summary['files_with_amount_mismatch'] == 0 and
+            summary['grand_total_match']):
+            print("✓ SUCCESS: All payment validations passed!")
+        else:
+            print("✗ ISSUES FOUND:")
+            if summary['files_with_missing'] > 0:
+                print(f"  - {summary['files_with_missing']} file(s) have missing dates")
+            if summary['files_with_amount_mismatch'] > 0:
+                print(f"  - {summary['files_with_amount_mismatch']} file(s) have amount mismatches")
+            if not summary['grand_total_match']:
+                print(f"  - Grand total mismatch: Diff={summary['grand_total_difference']:,.2f}")
+            if summary['error_files'] > 0:
+                print(f"  - {summary['error_files']} file(s) had errors")
+
+    if not results['sales'] and not results['payment']:
+        print("\n✗ No validations were performed. Please check:")
+        print("  - Merge files exist and are named correctly")
+        print("  - Individual files exist and match the expected patterns")
         return 1
 
-    return 0
+    return 0 if validation_success else 1
 
 
 if __name__ == '__main__':
