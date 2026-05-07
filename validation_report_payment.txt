@@ -1,19 +1,19 @@
 ================================================================================
 EXCEL DATA VALIDATION REPORT
 ================================================================================
-Generated: 2026-05-07 18:47:44
+Generated: 2026-05-07 19:09:45
 Merge File: 49_stores_payment_lines.xlsx
 
 SUMMARY
 --------------------------------------------------------------------------------
 Total Files Validated:        49
-Files with All Dates Present: 0 ✓
-Files with Missing Dates:     47 ✗
+Files with All Dates Present: 12 ✓
+Files with Missing Dates:     0 ✗
 Files with Amount Mismatch:   35 ✗
 Files with Errors:            2
-Total Missing Date Entries:   1322
+Total Missing Date Entries:   0
 
-Unique Dates in Merge File:   1
+Unique Dates in Merge File:   27
 Unique Dates in All Individual Files: 27
 
 AMOUNT VALIDATION
@@ -23,24 +23,11 @@ Grand Total (Merge File):           23,977,423.81
 Grand Total Difference:             0.00
 Grand Total Status:                 ✓ MATCH
 
-⚠ WARNING: Found 27 date(s) in individual files NOT in merge file:
-  - 2026-03-05
-  - 2026-03-06
-  - 2026-03-07
-  - 2026-03-08
-  - 2026-03-09
-  - 2026-03-10
-  - 2026-03-11
-  - 2026-03-12
-  - 2026-03-13
-  - 2026-03-14
-  ... and 17 more
-
 
 DETAILED RESULTS
 ================================================================================
 
-MISSING DATES & AMOUNT MISMATCH (35 files)
+AMOUNT MISMATCH (35 files)
 --------------------------------------------------------------------------------
 
 File: NAJPARK Payment Lines 5 to 31 March.xlsx
@@ -54,34 +41,6 @@ File: NAJPARK Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 1107
   Unique Orders (Merge): 1108
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: NAKHDMM payment line 5 to 31 March.xlsx
   Branch: NAKHDMM
@@ -95,34 +54,6 @@ File: NAKHDMM payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 4085
   Orders in Individual but not Merge: 5
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: NAKHELMALL payment line 5 to 31 March.xlsx
   Branch: NAKHELMALL
@@ -136,34 +67,6 @@ File: NAKHELMALL payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 3589
   Orders in Individual but not Merge: 1
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: NJRANFRONT PAYMENT LINES.xlsx
   Branch: NJRANFRONT
@@ -176,34 +79,6 @@ File: NJRANFRONT PAYMENT LINES.xlsx
   Unique Orders (Individual): 215
   Unique Orders (Merge): 214
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: OBHURMALL payment line 5 to 31 March.xlsx
   Branch: OBHURMALL
@@ -217,34 +92,6 @@ File: OBHURMALL payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 2933
   Orders in Individual but not Merge: 10
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: PANORAMA payment line 5 to 31 March.xlsx
   Branch: PANORAMA
@@ -257,34 +104,6 @@ File: PANORAMA payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 1389
   Unique Orders (Merge): 1388
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: PRNCSLRD payment line 5 to 31 March.xlsx
   Branch: PRNCSLRD
@@ -298,34 +117,6 @@ File: PRNCSLRD payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 3186
   Orders in Individual but not Merge: 8
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: QATIFCC Payment Lines 5 to 31 March.xlsx
   Branch: QATIFCC
@@ -339,34 +130,6 @@ File: QATIFCC Payment Lines 5 to 31 March.xlsx
   Unique Orders (Merge): 1825
   Orders in Individual but not Merge: 1
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: QATIFCFRNT Payment Lines 5 to 31 March.xlsx
   Branch: QATIFCFRNT
@@ -380,34 +143,6 @@ File: QATIFCFRNT Payment Lines 5 to 31 March.xlsx
   Unique Orders (Merge): 1700
   Orders in Individual but not Merge: 3
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: RASHIDABHA payment line 5 to 31 March.xlsx
   Branch: RASHIDABHA
@@ -420,34 +155,6 @@ File: RASHIDABHA payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 1937
   Unique Orders (Merge): 1938
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: RASHIDJZN payment line 5 to 31 March.xlsx
   Branch: RASHIDJZN
@@ -460,34 +167,6 @@ File: RASHIDJZN payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 1483
   Unique Orders (Merge): 1479
   Orders in Individual but not Merge: 4
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: RASHIDMAD payment line 5 to 31 March.xlsx
   Branch: RASHIDMAD
@@ -500,34 +179,6 @@ File: RASHIDMAD payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 1637
   Unique Orders (Merge): 1635
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: RASHIDMAD2 Payment lines 5-31.xlsx
   Branch: RASHIDMAD2
@@ -540,34 +191,6 @@ File: RASHIDMAD2 Payment lines 5-31.xlsx
   Unique Orders (Individual): 1468
   Unique Orders (Merge): 1467
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SALAMJED payment line 5 to 31 March.xlsx
   Branch: SALAMJED
@@ -580,34 +203,6 @@ File: SALAMJED payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 2898
   Unique Orders (Merge): 2900
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SALAMRYD payment line 5 to 31 March.xlsx
   Branch: SALAMRYD
@@ -620,34 +215,6 @@ File: SALAMRYD payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 2174
   Unique Orders (Merge): 2164
   Orders in Individual but not Merge: 10
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SALAMRYD2 Payment lines 5-31.xlsx
   Branch: SALAMRYD2
@@ -661,34 +228,6 @@ File: SALAMRYD2 Payment lines 5-31.xlsx
   Unique Orders (Merge): 2431
   Orders in Individual but not Merge: 1
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SAMTAHMALL Payment Lines 5 to 31 March.xlsx
   Branch: SAMTAHMALL
@@ -701,34 +240,6 @@ File: SAMTAHMALL Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 1636
   Unique Orders (Merge): 1637
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SKAKAPLAZA Payment lines 5-31.xlsx
   Branch: SKAKAPLAZA
@@ -741,34 +252,6 @@ File: SKAKAPLAZA Payment lines 5-31.xlsx
   Unique Orders (Individual): 1473
   Unique Orders (Merge): 1475
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SKAKASHLHB Payment lines 5-31.xlsx
   Branch: SKAKASHLHB
@@ -781,34 +264,6 @@ File: SKAKASHLHB Payment lines 5-31.xlsx
   Unique Orders (Individual): 1434
   Unique Orders (Merge): 1432
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SMARTSHRYD Payment lines 5-31.xlsx
   Branch: SMARTSHRYD
@@ -821,34 +276,6 @@ File: SMARTSHRYD Payment lines 5-31.xlsx
   Unique Orders (Individual): 1251
   Unique Orders (Merge): 1250
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TABOUK payment line 5 to 31 March.xlsx
   Branch: TABOUK
@@ -861,34 +288,6 @@ File: TABOUK payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 2602
   Unique Orders (Merge): 2600
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TAIFSHARST payment line 5 to 31 March.xlsx
   Branch: TAIFSHARST
@@ -901,34 +300,6 @@ File: TAIFSHARST payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 2263
   Unique Orders (Merge): 2265
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TAIFTERAML Payment lines 5-31.xlsx
   Branch: TAIFTERAML
@@ -941,34 +312,6 @@ File: TAIFTERAML Payment lines 5-31.xlsx
   Unique Orders (Individual): 1638
   Unique Orders (Merge): 1637
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TALAMALL payment line 5 to 31 March.xlsx
   Branch: TALAMALL
@@ -982,34 +325,6 @@ File: TALAMALL payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 1244
   Orders in Individual but not Merge: 3
   Orders in Merge but not Individual: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TAWAREN payment line 5 to 31 March.xlsx
   Branch: TAWAREN
@@ -1022,34 +337,6 @@ File: TAWAREN payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 2157
   Unique Orders (Merge): 2155
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: THEGATERYD Payment Lines 5 to 31 March.xlsx
   Branch: THEGATERYD
@@ -1062,34 +349,6 @@ File: THEGATERYD Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 1000
   Unique Orders (Merge): 999
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TIFZHRNCTR Payment lines 5-31.xlsx
   Branch: TIFZHRNCTR
@@ -1102,33 +361,6 @@ File: TIFZHRNCTR Payment lines 5-31.xlsx
   Unique Orders (Individual): 1560
   Unique Orders (Merge): 1559
   Orders in Individual but not Merge: 1
-  Missing Dates (26):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TOWNSQJED Payment Lines 5 to 31 March.xlsx
   Branch: TOWNSQJED
@@ -1141,34 +373,6 @@ File: TOWNSQJED Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 2709
   Unique Orders (Merge): 2707
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: UWALKJED Payment Lines 5 to 31 March.xlsx
   Branch: UWALKJED
@@ -1182,34 +386,6 @@ File: UWALKJED Payment Lines 5 to 31 March.xlsx
   Unique Orders (Merge): 2960
   Orders in Individual but not Merge: 6
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: VILLAGEHMT payment line 5 to 31 March.xlsx
   Branch: VILLAGEHMT
@@ -1223,34 +399,6 @@ File: VILLAGEHMT payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 3238
   Orders in Individual but not Merge: 5
   Orders in Merge but not Individual: 8
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: WESTAVENUE payment line 5 to 31 March.xlsx
   Branch: WESTAVENUE
@@ -1263,34 +411,6 @@ File: WESTAVENUE payment line 5 to 31 March.xlsx
   Unique Orders (Individual): 1782
   Unique Orders (Merge): 1780
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: YANBUMALL Payment Lines 5 to 31 March.xlsx
   Branch: YANBUMALL
@@ -1303,34 +423,6 @@ File: YANBUMALL Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 2114
   Unique Orders (Merge): 2112
   Orders in Individual but not Merge: 2
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: YASMEEN payment line 5 to 31 March.xlsx
   Branch: YASMEEN
@@ -1344,34 +436,6 @@ File: YASMEEN payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 3418
   Orders in Individual but not Merge: 10
   Orders in Merge but not Individual: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: YASMEENPLZ Payment Lines 5 to 31 March.xlsx
   Branch: YASMEENPLZ
@@ -1384,34 +448,6 @@ File: YASMEENPLZ Payment Lines 5 to 31 March.xlsx
   Unique Orders (Individual): 2133
   Unique Orders (Merge): 2132
   Orders in Individual but not Merge: 1
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: ZAHRAN payment line 5 to 31 March.xlsx
   Branch: ZAHRAN
@@ -1425,36 +461,8 @@ File: ZAHRAN payment line 5 to 31 March.xlsx
   Unique Orders (Merge): 3141
   Orders in Individual but not Merge: 7
   Orders in Merge but not Individual: 3
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
-MISSING DATES (12 files)
+SUCCESS (12 files)
 --------------------------------------------------------------------------------
 
 File: NAJRANPLZA Payment Lines 5 to 31 March.xlsx
@@ -1467,34 +475,6 @@ File: NAJRANPLZA Payment Lines 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 703
   Unique Orders (Merge): 703
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: NOUR payment line 5 to 31 March.xlsx
   Branch: NOUR
@@ -1506,34 +486,6 @@ File: NOUR payment line 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 2313
   Unique Orders (Merge): 2313
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: ONZSOQJADD PAYMENT LINES.xlsx
   Branch: ONZSOQJADD
@@ -1545,34 +497,6 @@ File: ONZSOQJADD PAYMENT LINES.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 456
   Unique Orders (Merge): 456
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: PARKHMT payment line 5 to 31 March.xlsx
   Branch: PARKHMT
@@ -1584,34 +508,6 @@ File: PARKHMT payment line 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 1855
   Unique Orders (Merge): 1855
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: QOUZBLVRD Payment lines 5-31.xlsx
   Branch: QOUZBLVRD
@@ -1623,34 +519,6 @@ File: QOUZBLVRD Payment lines 5-31.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 1435
   Unique Orders (Merge): 1435
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: QUNKYLPLZA payment line 5 to 31 March.xlsx
   Branch: QUNKYLPLZA
@@ -1662,34 +530,6 @@ File: QUNKYLPLZA payment line 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 2431
   Unique Orders (Merge): 2431
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: RASSBULVRD Payment Lines 5 to 31 March.xlsx
   Branch: RASSBULVRD
@@ -1701,34 +541,6 @@ File: RASSBULVRD Payment Lines 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 1346
   Unique Orders (Merge): 1346
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: SBTALYABVD Payment lines 5-31.xlsx
   Branch: SBTALYABVD
@@ -1740,34 +552,6 @@ File: SBTALYABVD Payment lines 5-31.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 686
   Unique Orders (Merge): 686
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: TAIBAMED Payment lines 5-31.xlsx
   Branch: TAIBAMED
@@ -1779,34 +563,6 @@ File: TAIBAMED Payment lines 5-31.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 3633
   Unique Orders (Merge): 3633
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: WADIDAWSER Payment lines 5-31.xlsx
   Branch: WADIDAWSER
@@ -1818,34 +574,6 @@ File: WADIDAWSER Payment lines 5-31.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 985
   Unique Orders (Merge): 985
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: WADILABAN payment line 5 to 31 March.xlsx
   Branch: WADILABAN
@@ -1857,34 +585,6 @@ File: WADILABAN payment line 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 1296
   Unique Orders (Merge): 1296
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 File: WATANIYAHB Payment Lines 5 to 31 March.xlsx
   Branch: WATANIYAHB
@@ -1896,34 +596,6 @@ File: WATANIYAHB Payment Lines 5 to 31 March.xlsx
   Amount Status: ✓ MATCH
   Unique Orders (Individual): 1804
   Unique Orders (Merge): 1804
-  Missing Dates (27):
-    - 2026-03-05
-    - 2026-03-06
-    - 2026-03-07
-    - 2026-03-08
-    - 2026-03-09
-    - 2026-03-10
-    - 2026-03-11
-    - 2026-03-12
-    - 2026-03-13
-    - 2026-03-14
-    - 2026-03-15
-    - 2026-03-16
-    - 2026-03-17
-    - 2026-03-18
-    - 2026-03-19
-    - 2026-03-20
-    - 2026-03-21
-    - 2026-03-22
-    - 2026-03-23
-    - 2026-03-24
-    - 2026-03-25
-    - 2026-03-26
-    - 2026-03-27
-    - 2026-03-28
-    - 2026-03-29
-    - 2026-03-30
-    - 2026-03-31
 
 ERROR (2 files)
 --------------------------------------------------------------------------------
