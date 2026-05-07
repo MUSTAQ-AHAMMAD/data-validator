@@ -1,219 +1,625 @@
 ================================================================================
-EXCEL DATE VALIDATION REPORT
+EXCEL DATA VALIDATION REPORT
 ================================================================================
-Generated: 2026-05-07 17:31:43
+Generated: 2026-05-07 17:55:49
 Merge File: 49_stores_sales_lines.xlsx
 
 SUMMARY
 --------------------------------------------------------------------------------
 Total Files Validated:        49
-Files with All Dates Present: 49 ✓
+Files with All Dates Present: 1 ✓
 Files with Missing Dates:     0 ✗
-Files with Errors:            0
+Files with Amount Mismatch:   46 ✗
+Files with Errors:            2
 Total Missing Date Entries:   0
 
 Unique Dates in Merge File:   27
 Unique Dates in All Individual Files: 27
 
+AMOUNT VALIDATION
+--------------------------------------------------------------------------------
+Grand Total (All Individual Files): 23,977,423.81
+Grand Total (Merge File):           23,963,714.69
+Grand Total Difference:             13,709.12
+Grand Total Status:                 ✗ MISMATCH
+
 
 DETAILED RESULTS
 ================================================================================
 
-SUCCESS (49 files)
+AMOUNT MISMATCH (46 files)
 --------------------------------------------------------------------------------
 
 File: NAJPARK Payment Lines 5 to 31 March.xlsx
+  Branch: NAJPARK
   Total Rows: 1270
   Unique Dates: 27
+  Individual File Amount: 289,041.00
+  Merge File Amount: 288,596.79
+  Amount Difference: 444.21
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1107
+  Unique Orders (Merge): 1108
+  Orders in Merge but not Individual: 1
 
 File: NAJRANPLZA Payment Lines 5 to 31 March.xlsx
+  Branch: NAJRANPLZA
   Total Rows: 830
   Unique Dates: 27
+  Individual File Amount: 189,302.00
+  Merge File Amount: 189,332.09
+  Amount Difference: -30.09
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 703
+  Unique Orders (Merge): 703
 
 File: NAKHDMM payment line 5 to 31 March.xlsx
+  Branch: NAKHDMM
   Total Rows: 4523
   Unique Dates: 27
+  Individual File Amount: 844,299.00
+  Merge File Amount: 845,854.60
+  Amount Difference: -1,555.60
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 4089
+  Unique Orders (Merge): 4085
+  Orders in Individual but not Merge: 5
+  Orders in Merge but not Individual: 1
 
 File: NAKHELMALL payment line 5 to 31 March.xlsx
+  Branch: NAKHELMALL
   Total Rows: 3850
   Unique Dates: 27
+  Individual File Amount: 1,070,491.00
+  Merge File Amount: 1,070,576.32
+  Amount Difference: -85.32
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3589
+  Unique Orders (Merge): 3589
+  Orders in Individual but not Merge: 1
+  Orders in Merge but not Individual: 1
 
 File: NJRANFRONT PAYMENT LINES.xlsx
+  Branch: NJRANFRONT
   Total Rows: 258
   Unique Dates: 27
+  Individual File Amount: 60,116.00
+  Merge File Amount: 60,030.70
+  Amount Difference: 85.30
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 215
+  Unique Orders (Merge): 214
+  Orders in Individual but not Merge: 1
 
 File: NOUR payment line 5 to 31 March.xlsx
+  Branch: NOUR
   Total Rows: 3122
   Unique Dates: 27
+  Individual File Amount: 860,610.00
+  Merge File Amount: 859,497.07
+  Amount Difference: 1,112.93
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2313
+  Unique Orders (Merge): 2313
 
 File: OBHURMALL payment line 5 to 31 March.xlsx
+  Branch: OBHURMALL
   Total Rows: 3221
   Unique Dates: 27
-
-File: ONAIZAH payment lines.xlsx
-  Total Rows: 1405
-  Unique Dates: 27
+  Individual File Amount: 711,540.00
+  Merge File Amount: 712,382.83
+  Amount Difference: -842.83
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2941
+  Unique Orders (Merge): 2933
+  Orders in Individual but not Merge: 10
+  Orders in Merge but not Individual: 2
 
 File: ONZSOQJADD PAYMENT LINES.xlsx
+  Branch: ONZSOQJADD
   Total Rows: 517
   Unique Dates: 27
+  Individual File Amount: 79,592.00
+  Merge File Amount: 79,421.64
+  Amount Difference: 170.36
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 456
+  Unique Orders (Merge): 456
 
 File: PANORAMA payment line 5 to 31 March.xlsx
+  Branch: PANORAMA
   Total Rows: 1537
   Unique Dates: 27
+  Individual File Amount: 284,434.00
+  Merge File Amount: 284,702.46
+  Amount Difference: -268.46
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1389
+  Unique Orders (Merge): 1388
+  Orders in Individual but not Merge: 1
 
 File: PARKHMT payment line 5 to 31 March.xlsx
+  Branch: PARKHMT
   Total Rows: 2223
   Unique Dates: 27
+  Individual File Amount: 313,743.03
+  Merge File Amount: 313,132.27
+  Amount Difference: 610.76
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1855
+  Unique Orders (Merge): 1855
 
 File: PRNCSLRD payment line 5 to 31 March.xlsx
+  Branch: PRNCSLRD
   Total Rows: 3527
   Unique Dates: 27
+  Individual File Amount: 984,027.05
+  Merge File Amount: 986,676.06
+  Amount Difference: -2,649.01
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3193
+  Unique Orders (Merge): 3186
+  Orders in Individual but not Merge: 8
+  Orders in Merge but not Individual: 1
 
 File: QATIFCC Payment Lines 5 to 31 March.xlsx
+  Branch: QATIFCC
   Total Rows: 2091
   Unique Dates: 27
+  Individual File Amount: 382,429.00
+  Merge File Amount: 381,888.81
+  Amount Difference: 540.19
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1824
+  Unique Orders (Merge): 1825
+  Orders in Individual but not Merge: 1
+  Orders in Merge but not Individual: 2
 
 File: QATIFCFRNT Payment Lines 5 to 31 March.xlsx
+  Branch: QATIFCFRNT
   Total Rows: 1924
   Unique Dates: 27
+  Individual File Amount: 377,925.00
+  Merge File Amount: 378,601.80
+  Amount Difference: -676.80
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1702
+  Unique Orders (Merge): 1700
+  Orders in Individual but not Merge: 3
+  Orders in Merge but not Individual: 1
 
 File: QOUZBLVRD Payment lines 5-31.xlsx
+  Branch: QOUZBLVRD
   Total Rows: 1557
   Unique Dates: 27
+  Individual File Amount: 341,845.00
+  Merge File Amount: 341,317.00
+  Amount Difference: 528.00
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1435
+  Unique Orders (Merge): 1435
 
 File: QUNKYLPLZA payment line 5 to 31 March.xlsx
+  Branch: QUNKYLPLZA
   Total Rows: 2694
   Unique Dates: 27
-
-File: RABWA payment line 5 to 31 March.xlsx
-  Total Rows: 2305
-  Unique Dates: 27
+  Individual File Amount: 546,449.65
+  Merge File Amount: 546,431.53
+  Amount Difference: 18.12
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2431
+  Unique Orders (Merge): 2431
 
 File: RASHIDABHA payment line 5 to 31 March.xlsx
+  Branch: RASHIDABHA
   Total Rows: 2348
   Unique Dates: 27
+  Individual File Amount: 426,492.01
+  Merge File Amount: 425,778.50
+  Amount Difference: 713.51
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1937
+  Unique Orders (Merge): 1938
+  Orders in Merge but not Individual: 1
 
 File: RASHIDJZN payment line 5 to 31 March.xlsx
+  Branch: RASHIDJZN
   Total Rows: 1827
   Unique Dates: 27
+  Individual File Amount: 291,860.00
+  Merge File Amount: 293,084.82
+  Amount Difference: -1,224.82
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1483
+  Unique Orders (Merge): 1479
+  Orders in Individual but not Merge: 4
 
 File: RASHIDMAD payment line 5 to 31 March.xlsx
+  Branch: RASHIDMAD
   Total Rows: 2054
   Unique Dates: 27
+  Individual File Amount: 419,294.00
+  Merge File Amount: 419,854.00
+  Amount Difference: -560.00
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1637
+  Unique Orders (Merge): 1635
+  Orders in Individual but not Merge: 2
 
 File: RASHIDMAD2 Payment lines 5-31.xlsx
+  Branch: RASHIDMAD2
   Total Rows: 1745
   Unique Dates: 27
+  Individual File Amount: 356,788.00
+  Merge File Amount: 356,882.17
+  Amount Difference: -94.17
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1468
+  Unique Orders (Merge): 1467
+  Orders in Individual but not Merge: 1
 
 File: RASSBULVRD Payment Lines 5 to 31 March.xlsx
+  Branch: RASSBULVRD
   Total Rows: 1491
   Unique Dates: 27
+  Individual File Amount: 292,068.00
+  Merge File Amount: 292,030.92
+  Amount Difference: 37.08
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1346
+  Unique Orders (Merge): 1346
 
 File: SALAMJED payment line 5 to 31 March.xlsx
+  Branch: SALAMJED
   Total Rows: 3375
   Unique Dates: 27
+  Individual File Amount: 758,382.00
+  Merge File Amount: 756,904.89
+  Amount Difference: 1,477.11
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2898
+  Unique Orders (Merge): 2900
+  Orders in Merge but not Individual: 2
 
 File: SALAMRYD payment line 5 to 31 March.xlsx
+  Branch: SALAMRYD
   Total Rows: 2487
   Unique Dates: 27
+  Individual File Amount: 465,431.00
+  Merge File Amount: 467,781.47
+  Amount Difference: -2,350.47
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2174
+  Unique Orders (Merge): 2164
+  Orders in Individual but not Merge: 10
 
 File: SALAMRYD2 Payment lines 5-31.xlsx
+  Branch: SALAMRYD2
   Total Rows: 2781
   Unique Dates: 27
+  Individual File Amount: 488,321.00
+  Merge File Amount: 487,557.87
+  Amount Difference: 763.13
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2430
+  Unique Orders (Merge): 2431
+  Orders in Individual but not Merge: 1
+  Orders in Merge but not Individual: 2
 
 File: SAMTAHMALL Payment Lines 5 to 31 March.xlsx
+  Branch: SAMTAHMALL
   Total Rows: 1897
   Unique Dates: 27
+  Individual File Amount: 353,336.00
+  Merge File Amount: 353,189.30
+  Amount Difference: 146.70
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1636
+  Unique Orders (Merge): 1637
+  Orders in Merge but not Individual: 1
 
 File: SBTALYABVD Payment lines 5-31.xlsx
+  Branch: SBTALYABVD
   Total Rows: 758
   Unique Dates: 27
+  Individual File Amount: 148,418.00
+  Merge File Amount: 148,447.03
+  Amount Difference: -29.03
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 686
+  Unique Orders (Merge): 686
 
 File: SKAKAPLAZA Payment lines 5-31.xlsx
+  Branch: SKAKAPLAZA
   Total Rows: 1719
   Unique Dates: 27
+  Individual File Amount: 287,557.00
+  Merge File Amount: 286,296.45
+  Amount Difference: 1,260.55
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1473
+  Unique Orders (Merge): 1475
+  Orders in Merge but not Individual: 2
 
 File: SKAKASHLHB Payment lines 5-31.xlsx
+  Branch: SKAKASHLHB
   Total Rows: 1707
   Unique Dates: 27
+  Individual File Amount: 269,272.00
+  Merge File Amount: 269,280.32
+  Amount Difference: -8.32
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1434
+  Unique Orders (Merge): 1432
+  Orders in Individual but not Merge: 2
 
 File: SMARTSHRYD Payment lines 5-31.xlsx
+  Branch: SMARTSHRYD
   Total Rows: 1375
   Unique Dates: 27
+  Individual File Amount: 309,800.00
+  Merge File Amount: 310,293.28
+  Amount Difference: -493.28
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1251
+  Unique Orders (Merge): 1250
+  Orders in Individual but not Merge: 1
 
 File: TABOUK payment line 5 to 31 March.xlsx
+  Branch: TABOUK
   Total Rows: 3119
   Unique Dates: 27
+  Individual File Amount: 606,280.00
+  Merge File Amount: 606,564.71
+  Amount Difference: -284.71
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2602
+  Unique Orders (Merge): 2600
+  Orders in Individual but not Merge: 2
 
 File: TAIBAMED Payment lines 5-31.xlsx
+  Branch: TAIBAMED
   Total Rows: 4165
   Unique Dates: 27
+  Individual File Amount: 1,428,916.00
+  Merge File Amount: 1,428,304.49
+  Amount Difference: 611.51
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3633
+  Unique Orders (Merge): 3633
 
 File: TAIFSHARST payment line 5 to 31 March.xlsx
+  Branch: TAIFSHARST
   Total Rows: 2807
   Unique Dates: 27
+  Individual File Amount: 599,214.00
+  Merge File Amount: 596,925.99
+  Amount Difference: 2,288.01
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2263
+  Unique Orders (Merge): 2265
+  Orders in Merge but not Individual: 2
 
 File: TAIFTERAML Payment lines 5-31.xlsx
+  Branch: TAIFTERAML
   Total Rows: 2021
   Unique Dates: 27
+  Individual File Amount: 381,303.00
+  Merge File Amount: 381,696.95
+  Amount Difference: -393.95
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1638
+  Unique Orders (Merge): 1637
+  Orders in Individual but not Merge: 1
 
 File: TALAMALL payment line 5 to 31 March.xlsx
+  Branch: TALAMALL
   Total Rows: 1393
   Unique Dates: 27
+  Individual File Amount: 347,385.26
+  Merge File Amount: 347,745.10
+  Amount Difference: -359.84
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1245
+  Unique Orders (Merge): 1244
+  Orders in Individual but not Merge: 3
+  Orders in Merge but not Individual: 2
 
 File: TAWAREN payment line 5 to 31 March.xlsx
+  Branch: TAWAREN
   Total Rows: 2437
   Unique Dates: 27
+  Individual File Amount: 806,575.99
+  Merge File Amount: 807,745.08
+  Amount Difference: -1,169.09
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2157
+  Unique Orders (Merge): 2155
+  Orders in Individual but not Merge: 2
 
 File: THEGATERYD Payment Lines 5 to 31 March.xlsx
+  Branch: THEGATERYD
   Total Rows: 1035
   Unique Dates: 27
+  Individual File Amount: 232,997.00
+  Merge File Amount: 233,357.68
+  Amount Difference: -360.68
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1000
+  Unique Orders (Merge): 999
+  Orders in Individual but not Merge: 1
 
 File: TIFZHRNCTR Payment lines 5-31.xlsx
+  Branch: TIFZHRNCTR
   Total Rows: 1916
   Unique Dates: 26
+  Individual File Amount: 303,179.00
+  Merge File Amount: 302,605.03
+  Amount Difference: 573.97
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1560
+  Unique Orders (Merge): 1559
+  Orders in Individual but not Merge: 1
 
 File: TOWNSQJED Payment Lines 5 to 31 March.xlsx
+  Branch: TOWNSQJED
   Total Rows: 3088
   Unique Dates: 27
+  Individual File Amount: 729,479.00
+  Merge File Amount: 730,216.97
+  Amount Difference: -737.97
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2709
+  Unique Orders (Merge): 2707
+  Orders in Individual but not Merge: 2
 
 File: UWALKJED Payment Lines 5 to 31 March.xlsx
+  Branch: UWALKJED
   Total Rows: 3349
   Unique Dates: 27
+  Individual File Amount: 607,099.00
+  Merge File Amount: 608,108.03
+  Amount Difference: -1,009.03
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2965
+  Unique Orders (Merge): 2960
+  Orders in Individual but not Merge: 6
+  Orders in Merge but not Individual: 1
 
 File: VILLAGEHMT payment line 5 to 31 March.xlsx
+  Branch: VILLAGEHMT
   Total Rows: 3614
   Unique Dates: 27
+  Individual File Amount: 675,068.00
+  Merge File Amount: 671,842.08
+  Amount Difference: 3,225.92
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3235
+  Unique Orders (Merge): 3238
+  Orders in Individual but not Merge: 5
+  Orders in Merge but not Individual: 8
 
 File: WADIDAWSER Payment lines 5-31.xlsx
+  Branch: WADIDAWSER
   Total Rows: 1166
   Unique Dates: 27
+  Individual File Amount: 214,764.00
+  Merge File Amount: 214,806.13
+  Amount Difference: -42.13
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 985
+  Unique Orders (Merge): 985
 
 File: WADILABAN payment line 5 to 31 March.xlsx
+  Branch: WADILABAN
   Total Rows: 1392
   Unique Dates: 27
-
-File: WATANIYAHB Payment Lines 5 to 31 March.xlsx
-  Total Rows: 2012
-  Unique Dates: 27
+  Individual File Amount: 413,679.00
+  Merge File Amount: 413,769.48
+  Amount Difference: -90.48
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1296
+  Unique Orders (Merge): 1296
 
 File: WESTAVENUE payment line 5 to 31 March.xlsx
+  Branch: WESTAVENUE
   Total Rows: 1897
   Unique Dates: 27
+  Individual File Amount: 423,838.01
+  Merge File Amount: 424,330.36
+  Amount Difference: -492.35
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 1782
+  Unique Orders (Merge): 1780
+  Orders in Individual but not Merge: 2
 
 File: YANBUMALL Payment Lines 5 to 31 March.xlsx
+  Branch: YANBUMALL
   Total Rows: 2725
   Unique Dates: 27
+  Individual File Amount: 432,078.00
+  Merge File Amount: 432,055.11
+  Amount Difference: 22.89
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2114
+  Unique Orders (Merge): 2112
+  Orders in Individual but not Merge: 2
 
 File: YASMEEN payment line 5 to 31 March.xlsx
+  Branch: YASMEEN
   Total Rows: 3962
   Unique Dates: 27
+  Individual File Amount: 731,029.98
+  Merge File Amount: 733,533.53
+  Amount Difference: -2,503.55
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3428
+  Unique Orders (Merge): 3418
+  Orders in Individual but not Merge: 10
+  Orders in Merge but not Individual: 1
 
 File: YASMEENPLZ Payment Lines 5 to 31 March.xlsx
+  Branch: YASMEENPLZ
   Total Rows: 2394
   Unique Dates: 27
+  Individual File Amount: 454,987.00
+  Merge File Amount: 455,263.44
+  Amount Difference: -276.44
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 2133
+  Unique Orders (Merge): 2132
+  Orders in Individual but not Merge: 1
 
 File: ZAHRAN payment line 5 to 31 March.xlsx
+  Branch: ZAHRAN
   Total Rows: 3478
   Unique Dates: 27
+  Individual File Amount: 702,490.00
+  Merge File Amount: 703,279.15
+  Amount Difference: -789.15
+  Amount Status: ✗ MISMATCH
+  Unique Orders (Individual): 3145
+  Unique Orders (Merge): 3141
+  Orders in Individual but not Merge: 7
+  Orders in Merge but not Individual: 3
+
+SUCCESS (1 files)
+--------------------------------------------------------------------------------
+
+File: WATANIYAHB Payment Lines 5 to 31 March.xlsx
+  Branch: WATANIYAHB
+  Total Rows: 2012
+  Unique Dates: 27
+  Individual File Amount: 991,445.82
+  Merge File Amount: 991,445.82
+  Amount Difference: -0.00
+  Amount Status: ✓ MATCH
+  Unique Orders (Individual): 1804
+  Unique Orders (Merge): 1804
+
+ERROR (2 files)
+--------------------------------------------------------------------------------
+
+File: ONAIZAH payment lines.xlsx
+  Branch: ONAIZAH
+  Total Rows: 1405
+  Unique Dates: 27
+  Individual File Amount: 279,289.01
+  Merge File Amount: 0.00
+  Amount Difference: 0.00
+  Amount Status: ✓ MATCH
+  Unique Orders (Individual): 1261
+  Unique Orders (Merge): 0
+  Error: Branch 'ONAIZAH' not found in merge file
+
+File: RABWA payment line 5 to 31 March.xlsx
+  Branch: RABWA
+  Total Rows: 2305
+  Unique Dates: 27
+  Individual File Amount: 413,464.00
+  Merge File Amount: 0.00
+  Amount Difference: 0.00
+  Amount Status: ✓ MATCH
+  Unique Orders (Individual): 1961
+  Unique Orders (Merge): 0
+  Error: Branch 'RABWA' not found in merge file
