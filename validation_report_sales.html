@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Data Validation Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .summary-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .summary-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .summary-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .status-success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .status-error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .status-missing {
+            color: #ffc107;
+            font-weight: bold;
+        }
+        .missing-dates {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #333;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>📊 Excel Data Validation Report</h1>
+                <p class="timestamp">Generated: 2026-05-07 18:28:02</p>
+                <p><strong>Merge File:</strong> 49_stores_sales_lines.xlsx</p>
+            </div>
+            <div class="status">✗ FAIL</div>
+        </div>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-label">Total Files Validated</div>
+                    <div class="summary-value">26</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #28a745;">
+                    <div class="summary-label">Files with All Dates ✓</div>
+                    <div class="summary-value" style="color: #28a745;">0</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #ffc107;">
+                    <div class="summary-label">Files with Missing Dates</div>
+                    <div class="summary-value" style="color: #ffc107;">0</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #ff6b6b;">
+                    <div class="summary-label">Files with Amount Mismatch</div>
+                    <div class="summary-value" style="color: #ff6b6b;">0</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #dc3545;">
+                    <div class="summary-label">Files with Errors</div>
+                    <div class="summary-value" style="color: #dc3545;">26</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Merge File Unique Dates</div>
+                    <div class="summary-value">27</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Total Missing Date Entries</div>
+                    <div class="summary-value">0</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #17a2b8;">
+                    <div class="summary-label">Grand Total (Individual Files)</div>
+                    <div class="summary-value" style="font-size: 18px;">0.00</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #17a2b8;">
+                    <div class="summary-label">Grand Total (Merge File)</div>
+                    <div class="summary-value" style="font-size: 18px;">23,963,714.69</div>
+                </div>
+                <div class="summary-item" style="border-left-color: #dc3545;">
+                    <div class="summary-label">Grand Total Status</div>
+                    <div class="summary-value" style="color: #dc3545; font-size: 18px;">✗ MISMATCH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Detailed Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Branch</th>
+                        <th>Status</th>
+                        <th>Total Rows</th>
+                        <th>Unique Dates</th>
+                        <th>Missing Dates</th>
+                        <th>Individual Amount</th>
+                        <th>Merge Amount</th>
+                        <th>Amount Diff</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>NAJPARK Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>NAJRANPLZA Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>NJRANFRONT Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>ONZSOQJADD Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>QATIFCC Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>QATIFCFRNT Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>QOUZBLVRD Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>RASHIDMAD2 Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>RASSBULVRD Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SALAMRYD2 Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SAMTAHMALL Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SBTALYABVD Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SKAKAPLAZA Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SKAKASHLHB Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>SMARTSHRYD Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>TAIBAMED Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>TAIFSHARST Sales line 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>TAIFTERAML Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>THEGATERYD Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>TIFZHRNCTR Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>TOWNSQJED Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>UWALKJED Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>WADIDAWSER Sales lines 5-31.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>WATANIYAHB Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>YANBUMALL Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                    <tr>
+                        <td>YASMEENPLZ Sales Lines 5 to 31 March.xlsx</td>
+                        <td>-</td>
+                        <td class="status-error">✗ Error</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Error: Column 'Date' not found</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
