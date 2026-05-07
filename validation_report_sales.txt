@@ -1,20 +1,20 @@
 ================================================================================
 EXCEL DATA VALIDATION REPORT
 ================================================================================
-Generated: 2026-05-07 18:28:02
+Generated: 2026-05-07 18:47:44
 Merge File: 49_stores_sales_lines.xlsx
 
 SUMMARY
 --------------------------------------------------------------------------------
-Total Files Validated:        26
-Files with All Dates Present: 0 ✓
+Total Files Validated:        49
+Files with All Dates Present: 49 ✓
 Files with Missing Dates:     0 ✗
 Files with Amount Mismatch:   0 ✗
-Files with Errors:            26
+Files with Errors:            0
 Total Missing Date Entries:   0
 
 Unique Dates in Merge File:   27
-Unique Dates in All Individual Files: 0
+Unique Dates in All Individual Files: 27
 
 AMOUNT VALIDATION
 --------------------------------------------------------------------------------
@@ -27,135 +27,201 @@ Grand Total Status:                 ✗ MISMATCH
 DETAILED RESULTS
 ================================================================================
 
-ERROR (26 files)
+SUCCESS (49 files)
 --------------------------------------------------------------------------------
 
 File: NAJPARK Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 6145
+  Unique Dates: 27
 
 File: NAJRANPLZA Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 4012
+  Unique Dates: 27
+
+File: NAKHDMM Sale line 5 to 31 March.xlsx
+  Total Rows: 18539
+  Unique Dates: 27
+
+File: NAKHELMALL Sale line 5 to 31 March.xlsx
+  Total Rows: 14669
+  Unique Dates: 27
 
 File: NJRANFRONT Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 1470
+  Unique Dates: 27
+
+File: NOUR Sale line 5 to 31 March.xlsx
+  Total Rows: 12427
+  Unique Dates: 27
+
+File: OBHURMALL Sale line 5 to 31 March.xlsx
+  Total Rows: 13325
+  Unique Dates: 27
+
+File: ONAIZAH Sale line 5 to 31 March.xlsx
+  Total Rows: 3747
+  Unique Dates: 27
 
 File: ONZSOQJADD Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 1407
+  Unique Dates: 27
+
+File: PANORAMA Sale line 5 to 31 March.xlsx
+  Total Rows: 5530
+  Unique Dates: 27
+
+File: PARKHMT Sale line 5 to 31 March.xlsx
+  Total Rows: 4697
+  Unique Dates: 27
+
+File: PRNCSLRD Sale line 5 to 31 March.xlsx
+  Total Rows: 15619
+  Unique Dates: 27
 
 File: QATIFCC Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 7868
+  Unique Dates: 27
 
 File: QATIFCFRNT Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 7610
+  Unique Dates: 27
 
 File: QOUZBLVRD Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 6651
+  Unique Dates: 27
+
+File: QUNKYLPLZA Sale line 5 to 31 March.xlsx
+  Total Rows: 12127
+  Unique Dates: 27
+
+File: RABWA Sale line 5 to 31 March.xlsx
+  Total Rows: 8264
+  Unique Dates: 27
+
+File: RASHIDABHA Sale line 5 to 31 March.xlsx
+  Total Rows: 10707
+  Unique Dates: 27
+
+File: RASHIDJZN Sale line 5 to 31 March.xlsx
+  Total Rows: 6555
+  Unique Dates: 27
+
+File: RASHIDMAD sale line 5 to 31 March.xlsx
+  Total Rows: 7892
+  Unique Dates: 27
 
 File: RASHIDMAD2 Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 5925
+  Unique Dates: 27
 
 File: RASSBULVRD Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 4955
+  Unique Dates: 27
+
+File: SALAMJED Sale line 5 to 31 March.xlsx
+  Total Rows: 14715
+  Unique Dates: 27
+
+File: SALAMRYD Sale line 5 to 31 March.xlsx
+  Total Rows: 8556
+  Unique Dates: 27
 
 File: SALAMRYD2 Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 8895
+  Unique Dates: 27
 
 File: SAMTAHMALL Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 8375
+  Unique Dates: 27
 
 File: SBTALYABVD Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 3279
+  Unique Dates: 27
 
 File: SKAKAPLAZA Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 5814
+  Unique Dates: 27
 
 File: SKAKASHLHB Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 5650
+  Unique Dates: 27
 
 File: SMARTSHRYD Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 5732
+  Unique Dates: 27
+
+File: TABOUK Sale line 5 to 31 March.xlsx
+  Total Rows: 12034
+  Unique Dates: 27
 
 File: TAIBAMED Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 20967
+  Unique Dates: 27
 
 File: TAIFSHARST Sales line 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 8413
+  Unique Dates: 27
 
 File: TAIFTERAML Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 4853
+  Unique Dates: 27
+
+File: TALAMALL Sale line 5 to 31 March.xlsx
+  Total Rows: 5303
+  Unique Dates: 27
+
+File: TAWAREN Sale line 5 to 31 March.xlsx
+  Total Rows: 11354
+  Unique Dates: 27
 
 File: THEGATERYD Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 4326
+  Unique Dates: 27
 
 File: TIFZHRNCTR Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 5480
+  Unique Dates: 26
 
 File: TOWNSQJED Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 14550
+  Unique Dates: 27
 
 File: UWALKJED Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 9661
+  Unique Dates: 27
+
+File: VILLAGEHMT Sale line 5 to 31 March.xlsx
+  Total Rows: 12312
+  Unique Dates: 27
 
 File: WADIDAWSER Sales lines 5-31.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 4067
+  Unique Dates: 27
+
+File: WADILABAN Sale line 5 to 31 March.xlsx
+  Total Rows: 5986
+  Unique Dates: 27
 
 File: WATANIYAHB Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 6861
+  Unique Dates: 27
+
+File: WESTAVENUE sale line 5 to 31 March.xlsx
+  Total Rows: 7414
+  Unique Dates: 27
 
 File: YANBUMALL Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 7699
+  Unique Dates: 27
+
+File: YASMEEN Sale line 5 to 31 March.xlsx
+  Total Rows: 12913
+  Unique Dates: 27
 
 File: YASMEENPLZ Sales Lines 5 to 31 March.xlsx
-  Total Rows: 0
-  Unique Dates: 0
-  Error: Column 'Date' not found
+  Total Rows: 9730
+  Unique Dates: 27
+
+File: ZAHRAN sale line 5 to 31 March.xlsx
+  Total Rows: 12344
+  Unique Dates: 27

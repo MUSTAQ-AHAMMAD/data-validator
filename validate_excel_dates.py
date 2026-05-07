@@ -14,6 +14,15 @@ It generates a detailed HTML and text report showing:
 - Amount validation (individual file totals vs merge file totals)
 - Grand total validation (all files combined)
 - Complete validation results
+
+CONFIGURATION:
+-------------
+You can customize the merge file names and patterns below to match your files:
+- SALES_MERGE_FILE: Name of the sales lines merge file
+- PAYMENT_MERGE_FILE: Name of the payment lines merge file
+- SALES_FILE_PATTERN: Regex pattern to identify sales line files
+- PAYMENT_FILE_PATTERN: Regex pattern to identify payment line files
+- Column names for both merge and individual files
 """
 
 import pandas as pd
@@ -26,22 +35,22 @@ warnings.filterwarnings('ignore')
 
 # Configuration - Sales Lines
 SALES_MERGE_FILE = '49_stores_sales_lines.xlsx'
-SALES_FILE_PATTERN = r'.*sales.*line.*\.xlsx$'  # Pattern to identify sales line files
+SALES_FILE_PATTERN = r'sale.*line'  # Pattern to identify sales line files (matches "sale line", "sales line", etc.)
 SALES_MERGE_DATE_COLUMN = 'Order Lines/Order Ref/Date'
-SALES_INDIVIDUAL_DATE_COLUMN = 'Date'
+SALES_INDIVIDUAL_DATE_COLUMN = 'Order Lines/Order Ref/Date'  # Sales files use same structure as merge
 SALES_MERGE_ORDER_REF_COLUMN = 'Order Lines/Order Ref'
 SALES_MERGE_AMOUNT_COLUMN = 'Order Lines/Subtotal'
-SALES_INDIVIDUAL_ORDER_REF_COLUMN = 'Order Ref'
-SALES_INDIVIDUAL_AMOUNT_COLUMN = 'Subtotal'
-SALES_INDIVIDUAL_BRANCH_COLUMN = 'Branch'
+SALES_INDIVIDUAL_ORDER_REF_COLUMN = 'Order Lines/Order Ref'  # Sales files use same structure as merge
+SALES_INDIVIDUAL_AMOUNT_COLUMN = 'Order Lines/Subtotal'  # Sales files use same structure as merge
+SALES_INDIVIDUAL_BRANCH_COLUMN = 'Branch'  # Note: Sales files may not have this column
 
 # Configuration - Payment Lines
-PAYMENT_MERGE_FILE = '49_stores_payment_lines.xlsx'  # Update this with actual payment merge file name
-PAYMENT_FILE_PATTERN = r'.*payment.*line.*\.xlsx$'  # Pattern to identify payment line files
-PAYMENT_MERGE_DATE_COLUMN = 'Payment Lines/Order Ref/Date'
+PAYMENT_MERGE_FILE = '49_stores_payment_lines.xlsx'
+PAYMENT_FILE_PATTERN = r'payment.*line'  # Pattern to identify payment line files (matches "payment line", "payment lines", etc.)
+PAYMENT_MERGE_DATE_COLUMN = 'Date'  # Payment merge uses same structure as individual files
 PAYMENT_INDIVIDUAL_DATE_COLUMN = 'Date'
-PAYMENT_MERGE_ORDER_REF_COLUMN = 'Payment Lines/Order Ref'
-PAYMENT_MERGE_AMOUNT_COLUMN = 'Payment Lines/Amount'
+PAYMENT_MERGE_ORDER_REF_COLUMN = 'Order Ref'  # Payment merge uses same structure as individual files
+PAYMENT_MERGE_AMOUNT_COLUMN = 'Payments/Amount'  # Payment merge uses same structure as individual files
 PAYMENT_INDIVIDUAL_ORDER_REF_COLUMN = 'Order Ref'
 PAYMENT_INDIVIDUAL_AMOUNT_COLUMN = 'Payments/Amount'
 PAYMENT_INDIVIDUAL_BRANCH_COLUMN = 'Branch'
@@ -780,6 +789,7 @@ def categorize_files(base_dir):
 
     sales_files = []
     payment_files = []
+    uncategorized_files = []
 
     # Remove merge files from the list
     sales_merge = base_path / SALES_MERGE_FILE
@@ -792,15 +802,17 @@ def categorize_files(base_dir):
 
         file_name_lower = file_path.name.lower()
 
+        # Check if file matches payment pattern first (to avoid misclassifying as sales)
+        # Since "sale" could match in words like "sales", we check payment first
+        if re.search(PAYMENT_FILE_PATTERN, file_name_lower, re.IGNORECASE):
+            payment_files.append(file_path)
         # Check if file matches sales pattern
-        if re.search(SALES_FILE_PATTERN, file_name_lower, re.IGNORECASE):
+        elif re.search(SALES_FILE_PATTERN, file_name_lower, re.IGNORECASE):
             sales_files.append(file_path)
-        # Check if file matches payment pattern
-        elif re.search(PAYMENT_FILE_PATTERN, file_name_lower, re.IGNORECASE):
-            payment_files.append(file_path)
         else:
-            # If no pattern matches, default to payment (for backward compatibility)
-            payment_files.append(file_path)
+            # If no pattern matches, add to uncategorized list
+            uncategorized_files.append(file_path)
+            print(f"⚠ Warning: Could not categorize file: {file_path.name}")
 
     return sorted(sales_files), sorted(payment_files)
 
