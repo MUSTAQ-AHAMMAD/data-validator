@@ -119,12 +119,19 @@ class ExcelDateValidator:
             self.merge_dates = set(self.merge_df[self.merge_date_column].dt.date)
 
             # Pre-compute amounts by branch for faster lookup
-            # Extract branch name from Order Ref (e.g., "SALAMRYD/12345" -> "SALAMRYD")
-            self.merge_df['branch'] = self.merge_df[self.merge_order_ref_column].str.split('/').str[0]
+            # IMPORTANT: Use the actual Branch column, not Order Ref prefix
+            # This ensures we only match orders that actually belong to the branch
+            if 'Branch' in self.merge_df.columns:
+                # Use the Branch column from the merge file (correct method)
+                branch_column = 'Branch'
+            else:
+                # Fallback: Extract branch name from Order Ref (e.g., "SALAMRYD/12345" -> "SALAMRYD")
+                self.merge_df['branch'] = self.merge_df[self.merge_order_ref_column].str.split('/').str[0]
+                branch_column = 'branch'
 
             # Group by branch and order ref to get order-level amounts
-            for branch in self.merge_df['branch'].unique():
-                branch_df = self.merge_df[self.merge_df['branch'] == branch]
+            for branch in self.merge_df[branch_column].unique():
+                branch_df = self.merge_df[self.merge_df[branch_column] == branch]
                 # Sum amounts by order ref to get order total (since merge file has line items)
                 order_amounts = branch_df.groupby(self.merge_order_ref_column)[self.merge_amount_column].sum()
                 total_amount = order_amounts.sum()
