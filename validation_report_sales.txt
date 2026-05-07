@@ -1,0 +1,161 @@
+================================================================================
+EXCEL DATA VALIDATION REPORT
+================================================================================
+Generated: 2026-05-07 18:28:02
+Merge File: 49_stores_sales_lines.xlsx
+
+SUMMARY
+--------------------------------------------------------------------------------
+Total Files Validated:        26
+Files with All Dates Present: 0 ✓
+Files with Missing Dates:     0 ✗
+Files with Amount Mismatch:   0 ✗
+Files with Errors:            26
+Total Missing Date Entries:   0
+
+Unique Dates in Merge File:   27
+Unique Dates in All Individual Files: 0
+
+AMOUNT VALIDATION
+--------------------------------------------------------------------------------
+Grand Total (All Individual Files): 0.00
+Grand Total (Merge File):           23,963,714.69
+Grand Total Difference:             -23,963,714.69
+Grand Total Status:                 ✗ MISMATCH
+
+
+DETAILED RESULTS
+================================================================================
+
+ERROR (26 files)
+--------------------------------------------------------------------------------
+
+File: NAJPARK Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: NAJRANPLZA Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: NJRANFRONT Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: ONZSOQJADD Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: QATIFCC Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: QATIFCFRNT Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: QOUZBLVRD Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: RASHIDMAD2 Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: RASSBULVRD Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SALAMRYD2 Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SAMTAHMALL Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SBTALYABVD Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SKAKAPLAZA Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SKAKASHLHB Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: SMARTSHRYD Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: TAIBAMED Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: TAIFSHARST Sales line 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: TAIFTERAML Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: THEGATERYD Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: TIFZHRNCTR Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: TOWNSQJED Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: UWALKJED Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: WADIDAWSER Sales lines 5-31.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: WATANIYAHB Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: YANBUMALL Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
+
+File: YASMEENPLZ Sales Lines 5 to 31 March.xlsx
+  Total Rows: 0
+  Unique Dates: 0
+  Error: Column 'Date' not found
