@@ -1,0 +1,219 @@
+================================================================================
+EXCEL DATE VALIDATION REPORT
+================================================================================
+Generated: 2026-05-07 17:31:43
+Merge File: 49_stores_sales_lines.xlsx
+
+SUMMARY
+--------------------------------------------------------------------------------
+Total Files Validated:        49
+Files with All Dates Present: 49 ✓
+Files with Missing Dates:     0 ✗
+Files with Errors:            0
+Total Missing Date Entries:   0
+
+Unique Dates in Merge File:   27
+Unique Dates in All Individual Files: 27
+
+
+DETAILED RESULTS
+================================================================================
+
+SUCCESS (49 files)
+--------------------------------------------------------------------------------
+
+File: NAJPARK Payment Lines 5 to 31 March.xlsx
+  Total Rows: 1270
+  Unique Dates: 27
+
+File: NAJRANPLZA Payment Lines 5 to 31 March.xlsx
+  Total Rows: 830
+  Unique Dates: 27
+
+File: NAKHDMM payment line 5 to 31 March.xlsx
+  Total Rows: 4523
+  Unique Dates: 27
+
+File: NAKHELMALL payment line 5 to 31 March.xlsx
+  Total Rows: 3850
+  Unique Dates: 27
+
+File: NJRANFRONT PAYMENT LINES.xlsx
+  Total Rows: 258
+  Unique Dates: 27
+
+File: NOUR payment line 5 to 31 March.xlsx
+  Total Rows: 3122
+  Unique Dates: 27
+
+File: OBHURMALL payment line 5 to 31 March.xlsx
+  Total Rows: 3221
+  Unique Dates: 27
+
+File: ONAIZAH payment lines.xlsx
+  Total Rows: 1405
+  Unique Dates: 27
+
+File: ONZSOQJADD PAYMENT LINES.xlsx
+  Total Rows: 517
+  Unique Dates: 27
+
+File: PANORAMA payment line 5 to 31 March.xlsx
+  Total Rows: 1537
+  Unique Dates: 27
+
+File: PARKHMT payment line 5 to 31 March.xlsx
+  Total Rows: 2223
+  Unique Dates: 27
+
+File: PRNCSLRD payment line 5 to 31 March.xlsx
+  Total Rows: 3527
+  Unique Dates: 27
+
+File: QATIFCC Payment Lines 5 to 31 March.xlsx
+  Total Rows: 2091
+  Unique Dates: 27
+
+File: QATIFCFRNT Payment Lines 5 to 31 March.xlsx
+  Total Rows: 1924
+  Unique Dates: 27
+
+File: QOUZBLVRD Payment lines 5-31.xlsx
+  Total Rows: 1557
+  Unique Dates: 27
+
+File: QUNKYLPLZA payment line 5 to 31 March.xlsx
+  Total Rows: 2694
+  Unique Dates: 27
+
+File: RABWA payment line 5 to 31 March.xlsx
+  Total Rows: 2305
+  Unique Dates: 27
+
+File: RASHIDABHA payment line 5 to 31 March.xlsx
+  Total Rows: 2348
+  Unique Dates: 27
+
+File: RASHIDJZN payment line 5 to 31 March.xlsx
+  Total Rows: 1827
+  Unique Dates: 27
+
+File: RASHIDMAD payment line 5 to 31 March.xlsx
+  Total Rows: 2054
+  Unique Dates: 27
+
+File: RASHIDMAD2 Payment lines 5-31.xlsx
+  Total Rows: 1745
+  Unique Dates: 27
+
+File: RASSBULVRD Payment Lines 5 to 31 March.xlsx
+  Total Rows: 1491
+  Unique Dates: 27
+
+File: SALAMJED payment line 5 to 31 March.xlsx
+  Total Rows: 3375
+  Unique Dates: 27
+
+File: SALAMRYD payment line 5 to 31 March.xlsx
+  Total Rows: 2487
+  Unique Dates: 27
+
+File: SALAMRYD2 Payment lines 5-31.xlsx
+  Total Rows: 2781
+  Unique Dates: 27
+
+File: SAMTAHMALL Payment Lines 5 to 31 March.xlsx
+  Total Rows: 1897
+  Unique Dates: 27
+
+File: SBTALYABVD Payment lines 5-31.xlsx
+  Total Rows: 758
+  Unique Dates: 27
+
+File: SKAKAPLAZA Payment lines 5-31.xlsx
+  Total Rows: 1719
+  Unique Dates: 27
+
+File: SKAKASHLHB Payment lines 5-31.xlsx
+  Total Rows: 1707
+  Unique Dates: 27
+
+File: SMARTSHRYD Payment lines 5-31.xlsx
+  Total Rows: 1375
+  Unique Dates: 27
+
+File: TABOUK payment line 5 to 31 March.xlsx
+  Total Rows: 3119
+  Unique Dates: 27
+
+File: TAIBAMED Payment lines 5-31.xlsx
+  Total Rows: 4165
+  Unique Dates: 27
+
+File: TAIFSHARST payment line 5 to 31 March.xlsx
+  Total Rows: 2807
+  Unique Dates: 27
+
+File: TAIFTERAML Payment lines 5-31.xlsx
+  Total Rows: 2021
+  Unique Dates: 27
+
+File: TALAMALL payment line 5 to 31 March.xlsx
+  Total Rows: 1393
+  Unique Dates: 27
+
+File: TAWAREN payment line 5 to 31 March.xlsx
+  Total Rows: 2437
+  Unique Dates: 27
+
+File: THEGATERYD Payment Lines 5 to 31 March.xlsx
+  Total Rows: 1035
+  Unique Dates: 27
+
+File: TIFZHRNCTR Payment lines 5-31.xlsx
+  Total Rows: 1916
+  Unique Dates: 26
+
+File: TOWNSQJED Payment Lines 5 to 31 March.xlsx
+  Total Rows: 3088
+  Unique Dates: 27
+
+File: UWALKJED Payment Lines 5 to 31 March.xlsx
+  Total Rows: 3349
+  Unique Dates: 27
+
+File: VILLAGEHMT payment line 5 to 31 March.xlsx
+  Total Rows: 3614
+  Unique Dates: 27
+
+File: WADIDAWSER Payment lines 5-31.xlsx
+  Total Rows: 1166
+  Unique Dates: 27
+
+File: WADILABAN payment line 5 to 31 March.xlsx
+  Total Rows: 1392
+  Unique Dates: 27
+
+File: WATANIYAHB Payment Lines 5 to 31 March.xlsx
+  Total Rows: 2012
+  Unique Dates: 27
+
+File: WESTAVENUE payment line 5 to 31 March.xlsx
+  Total Rows: 1897
+  Unique Dates: 27
+
+File: YANBUMALL Payment Lines 5 to 31 March.xlsx
+  Total Rows: 2725
+  Unique Dates: 27
+
+File: YASMEEN payment line 5 to 31 March.xlsx
+  Total Rows: 3962
+  Unique Dates: 27
+
+File: YASMEENPLZ Payment Lines 5 to 31 March.xlsx
+  Total Rows: 2394
+  Unique Dates: 27
+
+File: ZAHRAN payment line 5 to 31 March.xlsx
+  Total Rows: 3478
+  Unique Dates: 27
