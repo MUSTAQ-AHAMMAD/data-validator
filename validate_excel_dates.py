@@ -102,16 +102,36 @@ class ExcelDateValidator:
                 raise ValueError(f"Column '{self.merge_amount_column}' not found in merge file")
 
             # Convert to datetime and extract date only
-            self.merge_df[self.merge_date_column] = pd.to_datetime(self.merge_df[self.merge_date_column])
+            # Handle Excel serial dates (stored as floats) by checking the dtype
+            if self.merge_df[self.merge_date_column].dtype in ['float64', 'float32', 'object']:
+                # Check if values look like Excel serial dates (numbers > 1000)
+                sample_value = self.merge_df[self.merge_date_column].dropna().iloc[0] if len(self.merge_df[self.merge_date_column].dropna()) > 0 else None
+                if sample_value is not None and isinstance(sample_value, (int, float)) and sample_value > 1000:
+                    # Convert Excel serial dates (days since 1899-12-30)
+                    self.merge_df[self.merge_date_column] = pd.to_datetime(self.merge_df[self.merge_date_column], unit='D', origin='1899-12-30')
+                else:
+                    # Regular datetime conversion
+                    self.merge_df[self.merge_date_column] = pd.to_datetime(self.merge_df[self.merge_date_column])
+            else:
+                # Already datetime or can be converted normally
+                self.merge_df[self.merge_date_column] = pd.to_datetime(self.merge_df[self.merge_date_column])
+
             self.merge_dates = set(self.merge_df[self.merge_date_column].dt.date)
 
             # Pre-compute amounts by branch for faster lookup
-            # Extract branch name from Order Ref (e.g., "SALAMRYD/12345" -> "SALAMRYD")
-            self.merge_df['branch'] = self.merge_df[self.merge_order_ref_column].str.split('/').str[0]
+            # IMPORTANT: Use the actual Branch column, not Order Ref prefix
+            # This ensures we only match orders that actually belong to the branch
+            if 'Branch' in self.merge_df.columns:
+                # Use the Branch column from the merge file (correct method)
+                branch_column = 'Branch'
+            else:
+                # Fallback: Extract branch name from Order Ref (e.g., "SALAMRYD/12345" -> "SALAMRYD")
+                self.merge_df['branch'] = self.merge_df[self.merge_order_ref_column].str.split('/').str[0]
+                branch_column = 'branch'
 
             # Group by branch and order ref to get order-level amounts
-            for branch in self.merge_df['branch'].unique():
-                branch_df = self.merge_df[self.merge_df['branch'] == branch]
+            for branch in self.merge_df[branch_column].unique():
+                branch_df = self.merge_df[self.merge_df[branch_column] == branch]
                 # Sum amounts by order ref to get order total (since merge file has line items)
                 order_amounts = branch_df.groupby(self.merge_order_ref_column)[self.merge_amount_column].sum()
                 total_amount = order_amounts.sum()
@@ -171,7 +191,20 @@ class ExcelDateValidator:
                 return result
 
             # Date validation
-            df[self.individual_date_column] = pd.to_datetime(df[self.individual_date_column])
+            # Handle Excel serial dates (stored as floats) by checking the dtype
+            if df[self.individual_date_column].dtype in ['float64', 'float32', 'object']:
+                # Check if values look like Excel serial dates (numbers > 1000)
+                sample_value = df[self.individual_date_column].dropna().iloc[0] if len(df[self.individual_date_column].dropna()) > 0 else None
+                if sample_value is not None and isinstance(sample_value, (int, float)) and sample_value > 1000:
+                    # Convert Excel serial dates (days since 1899-12-30)
+                    df[self.individual_date_column] = pd.to_datetime(df[self.individual_date_column], unit='D', origin='1899-12-30')
+                else:
+                    # Regular datetime conversion
+                    df[self.individual_date_column] = pd.to_datetime(df[self.individual_date_column])
+            else:
+                # Already datetime or can be converted normally
+                df[self.individual_date_column] = pd.to_datetime(df[self.individual_date_column])
+
             file_dates = set(df[self.individual_date_column].dt.date)
 
             result['total_rows'] = len(df)
